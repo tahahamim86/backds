@@ -41,7 +41,7 @@ private AuthenticationManager authenticationManager;
         String token =  appUserService.signUpUser(new AppUser(request.getFirst_name() , request.getLast_name() , request.getEmail()
         , request.getPassword(),role));
 
-    String link = "http://localhost:9300/api/v1/registration/confirm?token=" + token;
+    String link = "https://backds-2-wt30.onrender.com/api/v1/registration/confirm?token=" + token;
         emailSender.send(
                 request.getEmail(),
                 buildEmail(request.getFirst_name(), link));
