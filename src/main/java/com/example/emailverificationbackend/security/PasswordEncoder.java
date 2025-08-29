@@ -9,7 +9,7 @@ public class PasswordEncoder {
 
    @Bean
 public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder(6); // Use 8 instead of 10 or higher
+    return new BCryptPasswordEncoder(); // Use 8 instead of 10 or higher
 }
 
 }
