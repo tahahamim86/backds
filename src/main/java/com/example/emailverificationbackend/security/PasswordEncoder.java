@@ -7,9 +7,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @Configuration
 public class PasswordEncoder {
 
-   @Bean
-public PasswordEncoder passwordEncoder() {
-    return new BCryptPasswordEncoder(8); // Use 8 instead of 10 or higher
-}
-
+    @Bean
+    public BCryptPasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 }
